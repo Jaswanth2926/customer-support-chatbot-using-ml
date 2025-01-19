@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book movie tickets online at ScreenScape. Latest movies, best prices, and premium cinema experience.">
+    <meta name="keywords" content="movie tickets, cinema booking, movie showtimes, theater tickets">
+    
+    <title>ScreenScape - Book Movie Tickets Online</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="css/chat.css">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span><i class="fas fa-phone"></i> +1 234 567 8900</span>
+                    <span><i class="fas fa-envelope"></i> support@screenscape.com</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand animate-logo" href="#">
+                <i class="fas fa-film"></i> ScreenScape
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#now-showing">Now Showing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#coming-soon">Coming Soon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offers">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-text fade-up">
+                            <div class="hero-badge">Now Showing</div>
+                            <h1 class="hero-title">
+                                Experience Movies Like <span class="highlight">Never Before</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Book your tickets for the latest movies with premium experience
+                            </p>
+                            <div class="hero-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-film"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <h4>Latest Movies</h4>
+                                        <p>All new releases</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-couch"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <h4>Premium Seats</h4>
+                                        <p>Luxury comfort</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-ticket-alt"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <h4>Easy Booking</h4>
+                                        <p>Quick & secure</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="search-container glass-effect">
+                            <h3 class="search-title">Quick Booking</h3>
+                            <div class="search-form">
+                                <div class="form-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-film"></i>
+                                        <input type="text" id="movieSearch" class="form-control" placeholder="Search for movies...">
+                                    </div>
+                                </div>
+
+                                <button class="search-btn btn-gradient" id="findShowsBtn">
+                                    <span>Find Shows</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Browse by Category</h2>
+                <p class="section-subtitle">Discover entertainment that suits your mood</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card" data-category="movies">
+                        <div class="category-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Movies</h3>
+                            <p>Latest blockbusters and classics</p>
+                            <div class="category-meta">
+                                <span class="count">250+ Shows</span>
+                                <span class="rating">
+                                    <i class="fas fa-star"></i>
+                                    4.8
+                                </span>
+                            </div>
+                            <a href="#" class="category-link">
+                                Explore <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card" data-category="theater">
+                        <div class="category-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Theater</h3>
+                            <p>Live performances and plays</p>
+                            <div class="category-meta">
+                                <span class="count">100+ Shows</span>
+                                <span class="rating">
+                                    <i class="fas fa-star"></i>
+                                    4.7
+                                </span>
+                            </div>
+                            <a href="#" class="category-link">
+                                Explore <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card" data-category="concerts">
+                        <div class="category-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Concerts</h3>
+                            <p>Music festivals and live shows</p>
+                            <div class="category-meta">
+                                <span class="count">50+ Events</span>
+                                <span class="rating">
+                                    <i class="fas fa-star"></i>
+                                    4.9
+                                </span>
+                            </div>
+                            <a href="#" class="category-link">
+                                Explore <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card" data-category="sports">
+                        <div class="category-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <div class="category-content">
+                            <h3>Sports</h3>
+                            <p>Live matches and tournaments</p>
+                            <div class="category-meta">
+                                <span class="count">30+ Events</span>
+                                <span class="rating">
+                                    <i class="fas fa-star"></i>
+                                    4.6
+                                </span>
+                            </div>
+                            <a href="#" class="category-link">
+                                Explore <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Now Showing Section -->
+    <section id="now-showing" class="movie-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="row align-items-center">
+                    <div>
+                        <h2 class="section-title">Now Showing</h2>
+                        <p class="section-subtitle">Showing <span id="movieCount">0</span> Movies</p>
+                    </div>
+                </div>
+            </div>
+
+               <!-- Genre Filters -->
+        <div class="genre-filters">
+            <!-- Filters will be added dynamically -->
+        </div>
+
+            <div id="movieGrid" class="movie-grid">
+                <!-- Movies will be loaded here -->
+            </div>
+
+            <div class="text-center mt-4 mb-5">
+                <button id="loadMoreBtn" class="btn-gradient load-more-btn" style="display: none;">
+                    <span>Load More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Modal -->
+    <div class="modal fade" id="filterModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Advanced Filters</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Rating Range -->
+                    <div class="filter-group mb-3">
+                        <label>Rating Range</label>
+                        <div class="range-slider">
+                            <input type="range" class="form-range" min="0" max="10" step="0.5">
+                            <span class="range-value">5.0+</span>
+                        </div>
+                    </div>
+                    <!-- Release Year -->
+                    <div class="filter-group mb-3">
+                        <label>Release Year</label>
+                        <select class="form-select">
+                            <option value="all">All Time</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this after the Now Showing Section -->
+    <section id="coming-soon" class="coming-soon-section">
+        <div class="container">
+            <!-- Enhanced Section Header -->
+            <div class="section-header text-center">
+                <h2 class="section-title">Coming Soon</h2>
+                <div class="section-subtitle">
+                    Upcoming <span class="highlight" id="upcomingCount">5</span> Movies
+                </div>
+            </div>
+
+            <!-- Enhanced Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-wrapper">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">
+                            <i class="fas fa-border-all"></i>
+                            <span>All Releases</span>
+                        </button>
+                        <button class="filter-tab" data-filter="this-month">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>This Month</span>
+                        </button>
+                        <button class="filter-tab" data-filter="next-month">
+                            <i class="fas fa-calendar-week"></i>
+                            <span>Next Month</span>
+                        </button>
+                    </div>
+                    <div class="filter-actions">
+                        <button class="action-btn sort-btn">
+                            <i class="fas fa-sort-amount-down"></i>
+                            <span>Sort by Date</span>
+                        </button>
+                        <button class="action-btn filter-btn" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="fas fa-sliders-h"></i>
+                            <span>Filters</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rest of your coming soon grid content -->
+           <div  style="display: none !important;">
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/original/ueFvlhVR6kzgS8e3WxDtGx1lFS9.jpg" alt="Deadpool 3">
+                        <div class="release-badge">
+                            <span class="month">Jul</span>
+                            <span class="date">26</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="overlay-content">
+                            <div class="movie-info">
+                                <div class="genre-tags">
+                                    <span>Action</span>
+                                    <span>Comedy</span>
+                                    <span>Sci-Fi</span>
+                                </div>
+                                <h3>Deadpool 3</h3>
+                                <p class="overview">The third installment in the Deadpool franchise featuring Ryan Reynolds and Hugh Jackman.</p>
+                                <div class="movie-meta">
+                                    <span><i class="fas fa-clock"></i> 2h 15m</span>
+                                    <span><i class="fas fa-star"></i> Expected 4.8</span>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn-trailer">
+                                        <i class="fas fa-play"></i> Watch Trailer
+                                    </button>
+                                    <button class="btn-notify">
+                                        <i class="fas fa-bell"></i> Get Notified
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat similar structure for other movies -->
+                <!-- Example of another movie card -->
+                <div class="coming-soon-card">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/original/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg" alt="Furiosa">
+                        <div class="release-badge">
+                            <span class="month">May</span>
+                            <span class="date">24</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="overlay-content">
+                            <div class="movie-info">
+                                <div class="genre-tags">
+                                    <span>Action</span>
+                                    <span>Adventure</span>
+                                    <span>Sci-Fi</span>
+                                </div>
+                                <h3>Furiosa</h3>
+                                <p class="overview">The origin story of Furiosa before she teamed up with Mad Max.</p>
+                                <div class="movie-meta">
+                                    <span><i class="fas fa-clock"></i> 2h 30m</span>
+                                    <span><i class="fas fa-star"></i> Expected 4.7</span>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn-trailer">
+                                        <i class="fas fa-play"></i> Watch Trailer
+                                    </button>
+                                    <button class="btn-notify">
+                                        <i class="fas fa-bell"></i> Get Notified
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more movie cards as needed -->
+            </div>
+        </div>
+            <div class="text-center mt-4">
+                <button id="upcomingLoadMore" class="btn btn-primary copy-code">
+                    Load More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="row align-items-center">
+                    <div>
+                        <h2 class="section-title">Special Offers</h2>
+                        <p class="section-subtitle">Exclusive Deals & Discounts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offers-grid">
+                <div class="offer-card student-offer">
+                    <div class="offer-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Student Discount</h3>
+                    <p class="offer-description">20% off on all movie tickets with valid student ID</p>
+                    <div class="offer-code">STUDENT20</div>
+                    <button class="btn btn-primary copy-code" data-code="STUDENT20">
+                        <i class="fas fa-copy"></i> Copy Code
+                    </button>
+                    <div class="valid-until">Valid until Dec 31, 2024</div>
+                </div>
+
+                <div class="offer-card family-offer">
+                    <div class="offer-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Package</h3>
+                    <p class="offer-description">Buy 3 tickets, get 1 free for family movies</p>
+                    <div class="offer-code">FAMILY4</div>
+                    <button class="btn btn-primary copy-code" data-code="FAMILY4">
+                        <i class="fas fa-copy"></i> Copy Code
+                    </button>
+                    <div class="valid-until">Valid until Nov 30, 2024</div>
+                </div>
+
+                <div class="offer-card weekend-offer">
+                    <div class="offer-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Weekend Special</h3>
+                    <p class="offer-description">15% off on all weekend show bookings</p>
+                    <div class="offer-code">WEEKEND15</div>
+                    <button class="btn btn-primary copy-code" data-code="WEEKEND15">
+                        <i class="fas fa-copy"></i> Copy Code
+                    </button>
+                    <div class="valid-until">Valid until Oct 31, 2024</div>
+                </div>
+
+                <div class="offer-card premium-offer">
+                    <div class="offer-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Premium Experience</h3>
+                    <p class="offer-description">Upgrade to premium seating for free</p>
+                    <div class="offer-code">PREMIUM</div>
+                    <button class="btn btn-primary copy-code" data-code="PREMIUM">
+                        <i class="fas fa-copy"></i> Copy Code
+                    </button>
+                    <div class="valid-until">Valid until Sep 30, 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Cards Section -->
+    <section class="gift-cards-section" id="gift-cards">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Gift Cards</h2>
+                <p class="section-subtitle">The Perfect Gift for Movie Lovers</p>
+            </div>
+            <div class="gift-cards-grid">
+                <div class="gift-card">
+                    <div class="gift-card-content">
+                        <div class="card-amount">$50</div>
+                        <h3>Classic Card</h3>
+                        <p>Perfect for a movie night</p>
+                        <button class="btn-purchase">Purchase Now</button>
+                    </div>
+                </div>
+                <div class="gift-card premium">
+                    <div class="gift-card-content">
+                        <div class="card-amount">$100</div>
+                        <h3>Premium Card</h3>
+                        <p>Movies with premium extras</p>
+                        <button class="btn-purchase">Purchase Now</button>
+                    </div>
+                </div>
+                <div class="gift-card ultimate">
+                    <div class="gift-card-content">
+                        <div class="card-amount">$200</div>
+                        <h3>Ultimate Card</h3>
+                        <p>Complete cinema experience</p>
+                        <button class="btn-purchase">Purchase Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="booking">Booking</button>
+                <button class="faq-category-btn" data-category="payments">Payments</button>
+                <button class="faq-category-btn" data-category="experience">Movie Experience</button>
+                <button class="faq-category-btn" data-category="membership">Membership</button>
+            </div>
+
+            <div class="faq-grid">
+                <!-- Booking FAQs -->
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <h3>How do I book tickets online?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Booking tickets is easy! Simply select your movie, choose your preferred showtime, select your seats, and complete the payment process. You'll receive an email confirmation with your booking details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="booking">
+                    <div class="faq-question">
+                        <h3>Can I cancel or modify my booking?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel or modify your booking up to 2 hours before the showtime. Visit the 'My Bookings' section in your account to make changes. Refunds will be processed according to our cancellation policy.</p>
+                    </div>
+                </div>
+
+                <!-- Payment FAQs -->
+                <div class="faq-item" data-category="payments">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods including credit/debit cards (Visa, MasterCard, American Express), PayPal, and digital wallets like Apple Pay and Google Pay. Gift cards and promotional vouchers can also be used.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="payments">
+                    <div class="faq-question">
+                        <h3>Are there any booking fees?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A small convenience fee applies to online bookings. This fee helps us maintain our booking platform. Premium members enjoy waived booking fees as part of their membership benefits.</p>
+                    </div>
+                </div>
+
+                <!-- Movie Experience FAQs -->
+                <div class="faq-item" data-category="experience">
+                    <div class="faq-question">
+                        <h3>What amenities are available at your theaters?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our theaters feature state-of-the-art sound systems, comfortable seating, and concession stands. Premium theaters include recliner seats, in-seat dining service, and enhanced audio-visual technology.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="experience">
+                    <div class="faq-question">
+                        <h3>Do you offer special screenings?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer IMAX screenings, 3D showings, and special event screenings like midnight premieres. We also host kid-friendly sessions and sensory-friendly screenings.</p>
+                    </div>
+                </div>
+
+                <!-- Membership FAQs -->
+                <div class="faq-item" data-category="membership">
+                    <div class="faq-question">
+                        <h3>What are the benefits of membership?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Members enjoy exclusive benefits including discounted tickets, waived booking fees, early access to blockbuster tickets, special concession deals, and points earning on purchases. Premium members get additional perks like free upgrades and priority seating.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="membership">
+                    <div class="faq-question">
+                        <h3>How do I earn and redeem reward points?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Members earn points on every purchase. Earn 1 point per dollar spent on tickets and concessions. Points can be redeemed for free tickets, concession items, or merchandise. Check your account dashboard for current point balance and redemption options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <!-- Main About Content -->
+            <div class="about-header text-center">
+                <h2 class="section-title">About ScreenScape</h2>
+                <p class="section-subtitle">Redefining Your Cinema Experience Since 2014</p>
+            </div>
+
+            <!-- Vision & Mission -->
+            <div class="vision-mission">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="vision-card">
+                            <div class="card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Our Vision</h3>
+                            <p>To revolutionize the cinema experience by creating unforgettable moments through cutting-edge technology and exceptional service.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mission-card">
+                            <div class="card-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Our Mission</h3>
+                            <p>Delivering premium entertainment experiences while fostering a community of movie enthusiasts through innovation and excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Statistics -->
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-value="50">0</span>
+                    <span class="stat-label">Premium Theaters</span>
+                    <p class="stat-desc">State-of-the-art venues across the country</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="1000000">0</span>
+                    <span class="stat-label">Happy Customers</span>
+                    <p class="stat-desc">Creating memories since our inception</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="10">0</span>
+                    <span class="stat-label">Years Experience</span>
+                    <p class="stat-desc">Dedicated to entertainment excellence</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="500">0</span>
+                    <span class="stat-label">Events Hosted</span>
+                    <p class="stat-desc">Special premieres and exclusive screenings</p>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-film"></i>
+                    <h4>Premium Screens</h4>
+                    <p>4K projection with Dolby Vision™ and crystal-clear imagery</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-volume-up"></i>
+                    <h4>Immersive Sound</h4>
+                    <p>Dolby Atmos® surround sound technology</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-couch"></i>
+                    <h4>Luxury Seating</h4>
+                    <p>Reclining leather seats with extra legroom</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Gourmet Dining</h4>
+                    <p>Premium food and beverage service</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h4>Easy Booking</h4>
+                    <p>Seamless online reservation system</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gift"></i>
+                    <h4>Rewards Program</h4>
+                    <p>Exclusive benefits for loyal customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h2 class="section-title">Get in Touch</h2>
+                        <p class="contact-text">We'd love to hear from you. Reach out to us for any queries or assistance.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Visit Us</h3>
+                                    <p>123 Cinema Street, Movie City, MC 12345</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Call Us</h3>
+                                    <p>+1 234 567 8900</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email Us</h3>
+                                    <p>support@screenscape.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <select name="subject" class="form-control" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="Booking Inquiry">Booking Inquiry</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div id="formMessage"></div>
+                            <button type="submit" class="btn btn-purchase btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-info">
+                            <a href="#" class="footer-logo">
+                                <i class="fas fa-film"></i> ScreenScape
+                            </a>
+                            <p class="footer-desc">
+                                Your premier destination for booking movie tickets online. Experience the latest blockbusters in premium theaters across the country.
+                            </p>
+                            <div class="download-apps">
+                                <h4>Get the App</h4>
+                                <div class="app-buttons">
+                                    <a href="#" class="app-btn">
+                                        <i class="fab fa-google-play"></i>
+                                        <span>Google Play</span>
+                                    </a>
+                                    <a href="#" class="app-btn">
+                                        <i class="fab fa-apple"></i>
+                                        <span>App Store</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#now-showing">Now Showing</a></li>
+                            <li><a href="#coming-soon">Coming Soon</a></li>
+                            <li><a href="#cinemas">Our Cinemas</a></li>
+                            <li><a href="#offers">Offers & Promotions</a></li>
+                            <li><a href="#gift-cards">Gift Cards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                        <h4 class="footer-title">Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p class="newsletter-desc">Subscribe to our newsletter for exclusive movie updates and special offers.</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2024 ScreenScape. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-methods">
+                            <span>Payment Methods:</span>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-clapperboard-play"></i>
+                <h3>Assistant</h3>
+            </div>
+            <div class="chat-actions">
+                <button class="new-chat-btn" aria-label="New Chat">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="minimize-btn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-body" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! How can I assist you today?</p>
+                    <span class="time">Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Section -->
+        <div class="chat-bottom">
+            <div class="chat-suggestions">
+                <button data-query="Latest Movies">🎬 Latest Movies</button>
+                <button data-query="Show Times">🕒 Show Times</button>
+                <button data-query="Recommendations">🌟 Recommendations</button>
+                <button data-query="Book Tickets">🎟️ Book Tickets</button>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-actions">
+                    <button class="upload-btn" aria-label="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="voice-btn" aria-label="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="movieDetailModal" tabindex="-1" aria-labelledby="movieDetailModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title" id="movieDetailModalLabel">Movie Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="movie-detail-content">
+                        <!-- Content will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html> 
